@@ -1,0 +1,12 @@
+<p>
+  <strong>establecimiento:</strong>
+  <%= @location.establecimiento %>
+</p>
+ 
+<p>
+  <strong>Descripción:</strong>
+  <%= @location.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_location_path(@location) %> |
+<%= link_to 'Atras', locations_path %>

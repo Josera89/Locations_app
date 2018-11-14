@@ -1,0 +1,20 @@
+
+<%= form_with model: @location, local: true do |form| %>
+ 
+
+ 
+  <p>
+    <%= form.label :establecimiento %><br>
+    <%= form.text_field :establecimiento %>
+  </p>
+ 
+  <p>
+    <%= form.label :descripcion %><br>
+    <%= form.text_area :descripcion %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>

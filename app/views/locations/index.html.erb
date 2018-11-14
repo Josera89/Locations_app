@@ -1,0 +1,21 @@
+<h1>Locaciones</h1>
+ 
+<table>
+  <tr>
+    <th>Establecimiento</th>
+    <th>Descripcion</th>
+    <th></th>
+  </tr>
+ 
+  <% @locations.each do |location| %>
+    <tr>
+      <td><%= location.establecimiento %></td>
+      <td><%= location.descripcion %></td>
+      <td><%= link_to 'Ver más...', location_path(location) %> |</td> 
+      <td><%= link_to 'Editar', edit_location_path(location) %></td>
+      <td><%= link_to 'Borrar', location_path(location),
+        method: :delete,
+        data: { confirm: '¿Estas seguro?' } %></td>
+    </tr>
+  <% end %>
+</table>
